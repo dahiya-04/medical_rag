@@ -1,0 +1,7 @@
+2026-04-01 09:50:16,495 - ERROR - Error creating text chunks: No documents to create text chunks from. | Error: None | File: Unknown File | Line: Unknown Line
+2026-04-01 09:50:16,495 - ERROR - Error in vector store creation function: Error creating text chunks: No documents to create text chunks from. | Error: None | File: Unknown File | Line: Unknown Line | Error: None | File: /workspaces/medical_rag/app/components/pdf_loader.py | Line: 34
+2026-04-01 09:58:08,343 - ERROR - Error saving vector store: 'str' object has no attribute 'embed_documents' | Error: None | File: /workspaces/medical_rag/app/components/vector_store.py | Line: 35
+2026-04-01 09:58:08,343 - ERROR - Error in vector store creation function: Error saving vector store: 'str' object has no attribute 'embed_documents' | Error: None | File: /workspaces/medical_rag/app/components/vector_store.py | Line: 35
+2026-04-01 10:03:52,756 - WARNING - Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-04-01 10:09:24,847 - ERROR - Error in vector store creation function: name 'save_vector_store' is not defined
+2026-04-01 10:12:56,327 - WARNING - Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
