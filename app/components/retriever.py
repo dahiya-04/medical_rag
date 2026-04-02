@@ -1,6 +1,6 @@
-from langchain.chains import RetrievalQA
+from langchain_classic.chains  import RetrievalQA
 from langchain_core.prompts import PromptTemplate
-from app.compenents.llm import load_llm
+from app.components.llm import load_llm
 from app.components.vector_store import load_vector_store
 from app.common.logger import get_logger
 from app.common.custom_exception import CustomException
@@ -27,6 +27,7 @@ def create_qa_chain():
     try:
         logger.info("loading vector store...")
         db = load_vector_store()
+        
         llm=load_llm()
         if db is None:
             logger.warning("Vector store is not available. Cannot create QA chain.")
@@ -42,5 +43,7 @@ def create_qa_chain():
         logger.info("QA chain created successfully.")
         return qa_chain
     except Exception as e:
+        import traceback
+        traceback.print_exc()
         logger.error(f"Error occurred while creating QA chain: {str(e)}")
         raise CustomException("Failed to create QA chain.")

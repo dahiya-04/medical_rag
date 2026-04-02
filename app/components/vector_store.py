@@ -13,7 +13,7 @@ def load_vector_store():
         logger.info("Loading vector store from disk...")
         embeddings_model = get_embeddings()
         if os.path.exists(db_faiss_path):
-            vector_store = FAISS.load_local(db_faiss_path, embeddings_model,allow_dangerous_code_execution=True)
+            vector_store = FAISS.load_local(db_faiss_path, embeddings_model,allow_dangerous_deserialization=True )
             logger.info("Vector store loaded successfully.")
             return vector_store
         else:
